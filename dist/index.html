@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/76866f5b07.js" crossorigin="anonymous"></script>
+
+    <script src="main.js" defer></script>
+
+    <title>Todo List Web Application </title>
+</head>
+<body>
+    
+    <header>
+        <h2>TODO LIST</h2>
+        <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+        <!-- <div class="close-mark"><i class="fa-solid fa-square-xmark fa-xl"></i></div> -->
+    </header>
+
+    <main>
+        <div class="content">
+            <nav class="todo-pick" data-navbar>
+                <div class="date-picked-list">
+                    <div class="all-time-list">All Time</div>
+                    <div class="this-week-list">This Week</div>
+                    <div class="today-list">Today</div>
+                </div>
+                <div class="all-tasks">
+                    <h3 class="task-list-title">Projects</h3>
+                    <ul class="task-list" data-lists>
+                        <!-- <li class="list-name" active-list>Youtube</li>
+                        <li class="list-name">Work</li>
+                        <li class="list-name">Grocery</li> -->
+                    </ul>
+                    
+                    <form action="">
+                        <button class="add-projects">Add task</button>
+                        <dialog class="modal-project">
+                            <form class="form" method="dialog" data-new-list-form>
+                                <input data-new-list-input type="text" id="message" placeholder="e.g. Household chores" data-new-list-input>
+                                <div class="options">
+                                    <button class="btn" id="submit-project-button">Submit</button>
+                                    <button class="btn" id="close-project-button">Close</button>
+                                </div>
+                            </form>
+                        </dialog>
+                    </form>
+                    
+    
+                    
+    
+                </div>      
+            </nav>
+    
+            <div class="todo-list" data-list-display-container>
+                <div class="todo-header">
+                    <h4 class="header-content" data-list-title>TODO</h4>
+                    <p class="task-count" data-list-count>Current tasks: 0</p>
+                </div>
+                
+                <div class="todo-body">
+
+                    <div class="tasks" data-tasks>
+
+                        
+                    </div>
+
+                    <div class="new-task-creator">
+                        <form action ="">
+                            <button class="add-todo-button">Add task</button>
+                            <dialog class="modal-task">
+                                <form class="form" method="dialog" data-new-task-form>
+                                    <input type="text" id="message" placeholder="e.g. Household chores" data-new-task-input>
+                                    <div class="options">
+                                        <button class="btn" id="submit-task-button">Submit</button>
+                                        <button class="btn" id="close-task-button">Close</button>
+                                    </div>
+                                </form>
+                            </dialog>
+                        </form>
+                    </div>
+
+                    <div class="delete">
+                        <button class="btn delete delete-btns" data-clear-complete-tasks-button>Clear tasks</button>
+                        <button class="btn delete delete-btns" data-delete-list-button>Delete list</button>
+                    </div>
+
+                </div>
+                
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox"/>
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+        </div>
+    </template>
+</body>
+</html>

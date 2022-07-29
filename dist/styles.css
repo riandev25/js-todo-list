@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,400;1,900&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --basic-font: 1.1rem;
+  --font-family: Montserrat, sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family)
+}
+
+body {
+  height: 100vh;
+}
+
+.hamburger {
+  display: none;
+}
+
+.close-mark {
+  display: none;
+}
+
+header {
+  background-color: black;
+  color: #fff;
+  width: 100%;
+  height: 110px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active-navbar {
+  display: block;
+  width: 100%;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 110px);
+  background-color: lightblue;
+}
+
+.todo-pick {
+  min-width: 400px;
+  background-color: lightgray;
+}
+
+.date-picked-list {
+  font-size: var(--basic-font);
+  margin: 7% 7% 10% 7%;
+  line-height: 35px;
+}
+
+.modal-project,
+.modal-task {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem 3rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+dialog[open] {
+  display: inline-flex;
+}
+
+#message {
+  font-size:1.1rem;
+  margin-bottom: 1.6rem;
+  margin-top: 0;
+  width: 100%;
+  padding: 2%;
+}
+.btn {
+  color: inherit;
+  font-family:inherit;
+  font-size: inherit;
+  background: white;
+  padding: 0.3rem 3.4rem;
+  border: 3px solid black;
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+}
+
+.btn:last-child {
+  margin: 0;
+}
+
+.btn:hover,
+.add-projects:hover {
+  box-shadow: 0.4rem 0.4rem 0 black;
+  transform: translate(-0.4rem, -0.4rem);
+}
+
+.btn:active {
+  box-shadow: 0 0 0 black;
+  transform: translate(0, 0);
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h3 {
+  font-size: 20px;
+  margin-left: 7%;
+}
+
+.task-list {
+  margin: 3% 7%;
+  line-height: 27px;
+}
+
+.list-name:hover {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.active-list {
+  font-weight: 900;
+}
+
+ul {
+  list-style: none;
+}
+
+.add-projects {
+  margin: 3% 7% 10% 7%;
+  border-radius: 30px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background: white;
+  padding: 0.3rem 7rem;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+  border-radius: 30px;
+}
+
+.new-task {
+  margin: 3% 7% 10% 7%;
+}
+
+.todo-list {
+  flex: 1;
+  margin-top: 4%;
+  margin-left: 15%;
+}
+
+.header-content {
+  font-size: 32px;
+  margin-bottom: 2%;
+}
+
+
+.tasks {
+  line-height: 23px;
+  font-size: 18px
+}
+
+.new-task-creator {
+  padding-top: 2%;
+}
+
+.add-todo-button {
+  color:inherit;
+  font-family:inherit;
+  font-size: inherit;
+  background: white;
+  padding: 0.3rem 3.4rem;
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+  border-radius: 30px;
+}
+
+.add-todo-button:hover {
+  box-shadow: 0.4rem 0.4rem 0 black;
+  transform: translate(-0.4rem, -0.4rem);
+}
+
+.delete {
+  margin-top: 2%;
+}
+
+.delete-btns {
+  border-radius: 30px;
+  border: 2px solid black;
+}
+
+@media (max-width: 984px) {
+  .delete:last-child {
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .todo-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .todo-pick {
+    display: none;
+  }
+  .active-navbar {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+  }
+  .content {
+    flex-direction: column;
+    position: relative;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .all-tasks {
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: 600px) {
+  .active-navbar {
+    width: 400px;
+  }
+}
+
